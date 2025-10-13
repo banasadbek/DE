@@ -1,0 +1,152 @@
+body{
+  background-color: #0e1621;
+  font-family: "Geist", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+ 
+:root {
+  --screen-bg: #17212b;
+  --chat-bg: #1d2733;
+  --header-bg: #242f3d;
+  --archive-bg: #3f5263;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+p{
+  color: white;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+}
+
+.screen{
+  position: relative;
+  width: 340px;
+  height: 620px;
+  background-color: var(--screen-bg);
+  border-radius: 26px;
+  overflow: hidden; /* Clip overflow */
+}
+
+.header{
+  position: relative;
+  background-color: var(--header-bg);
+  height: 64px;
+  border-radius: 26px 26px 0 0;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+  padding-left: 18px;
+}
+
+.chat-list{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background-color: var(--screen-bg);
+  z-index: 1;
+  width: 100%;
+  top: 0px;
+  transition: transform 0.05s ease;
+}
+
+.cover{
+  position: absolute;
+  top: 64px;
+  width: 100%;
+  height: 0px;
+  background-color: var(--archive-bg);
+  z-index: 2;
+  opacity: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: start;
+  padding: 0px 22px 0px 22px;
+  gap: 18px;
+}
+
+.bar{
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: #8692a2; 
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  margin-bottom: 8px;
+}
+
+.archive-icon{
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  /* background-color: #fff; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover img{
+  width: 20px;
+  transition: transform 0.15s ease;
+}
+
+.cover p{
+  color: white;
+  padding: 0 0 8px 0;
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateY(6px); /* Start below for slide-in */
+  transition: opacity 0.2s ease, transform 0.2s ease; /* Fade and slide */
+  width: 100%;
+  text-align: center;
+}
+
+.archive{
+  background-color: var(--archive-bg);
+  height: 64px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  gap: 8px;
+}
+
+.archive .circle{
+  width: 44px;
+  height: 44px;
+  background-color: #60a2df;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.archive img{
+  width: 22px;
+  height: 22px;
+}
+
+.archive p{
+  font-size: 14px;
+
+}
+
+.chat{
+  height: 64px;
+  background-color: var(--chat-bg);
+  padding-left: 18px;
+}
+
+
